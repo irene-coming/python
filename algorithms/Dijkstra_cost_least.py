@@ -1,9 +1,6 @@
-#!/usr/bin/env python
-# encoding: utf-8
-'''
-@author: jianhan513@163.com
-@time: 2020/1/26 下午4:03
-'''
+# -*- coding: utf-8 -*-
+# @Time    : 2020/1/26 下午4:03
+# @Author  : jianhan513@163.com
 
 def dijkstra():
     """

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2020/1/1 PM4:13
-# @Author  : zhaohongjie@jianhan513.com
+# @Author  : jianhan513@163.com
 import math
 
 def binary_search(arr, target):
