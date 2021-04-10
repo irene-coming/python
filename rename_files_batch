@@ -1,0 +1,22 @@
+import os,sys
+def add_prefix(path):
+    old_file_names = os.listdir(path)
+    i = 0
+    for file_name in old_file_names:
+        if file_name != sys.argv[0]:
+            postfix = re.sub(r"^(\d+\.)+","",file_name)
+            i = i+1
+            new_name = "%03d.%s" % (i,postfix)
+            os.rename(os.path.join(path,file_name),os.path.join(path,new_name))
+            print("old name is:", file_name, "new name is:", new_name)
+
+if __name__ == '__main__':
+    if len(sys.argv)<2:
+        path = input("please enter the path under which you want to rename files:")
+    else:
+        path = sys.argv[1]
+    if not os.path.exists(path):
+        print(f"'{path}' is not a valid path, please input full path and make sure it exists")
+        sys.exit()
+    print(f"Files in '{path}' will be renamed by addding num prefix")
+    add_prefix(path)
