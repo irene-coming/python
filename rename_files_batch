@@ -10,11 +10,11 @@ def add_prefix(path, exceptions):
             i = i+1
             new_name = "%03d.%s" % (i,postfix)
             os.rename(os.path.join(path,file_name),os.path.join(path,new_name))
-            print("old name is:", file_name, "new name is:", new_name)
+            print("Old name is:", file_name, ", new name is:", new_name)
 
 if __name__ == '__main__':
     if len(sys.argv)<2:
-        path = input("please enter the path under which you want to rename files:")
+        path = input("Please enter the path under which you want to rename files:")
     else:
         path = sys.argv[1]
     if not os.path.exists(path):
